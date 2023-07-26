@@ -1,0 +1,51 @@
+<html>
+
+<head>
+
+    <title>App 5 by Team Alpha </title>
+
+    <style>
+        * { font-size: 50px;}
+		body{ background-color: lightblue; }
+    </style>
+    <script>
+        function find() 
+		{
+			event.preventDefault();
+			let num = document.getElementById("num");
+			let ans = document.getElementById("ans");
+
+           if (num.value == "") 
+		{
+             alert("Input is empty");
+             ans.innerHTML = "";
+			num.focus();
+             return;
+		} 
+		    let n = parseInt(num.value);
+			let msg = "";
+			if (n % 2 == 0)
+				msg = "EVEN";
+			else
+				msg = "ODD";
+			ans.innerHTML = msg;
+      	 	 }
+    </script>
+</head>
+
+<body>
+    <center>
+
+        <h1> Find Even or Odd Number </h1>
+        <form onsubmit="find()">
+
+            <input type="number" placeholder="Enter an Integer" id="num" />
+            <br><br>
+            <input type="submit" style="background-color: lightgreen; font-size: 35px;" value="Find EVEN/ODD" />
+        </form>
+        <h1 id="ans"> </h1>
+
+    </center>
+</body>
+
+</html>
